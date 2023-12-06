@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">StyleSync</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_first_onboarding">FirstOnboardingActivity</string>
+    <string name="onboarding_1">
+        Welcome to StyleSync, your personal fashion haven! We’re thrilled to have you on board.
+        Let’s embark on a journey to elevate your style game together!
+    </string>
+    <string name="onboarding_2">
+        First things first, let\'s get you set up! Please create an account to unlock the full
+        potential of StyleSync. Your style adventure awaits!
+    </string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="name_placeholder">your name</string>
+    <string name="email_placeholder">youremail@mailprovider.com</string>
+    <string name="password_placeholder">your password</string>
+    <string name="reenter_password_placeholder">re-enter password</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>
