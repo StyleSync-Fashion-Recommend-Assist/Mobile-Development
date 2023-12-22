@@ -19,10 +19,4 @@ class MainViewModel(private val repository: Repository) : ViewModel() {
             }
         }
     }
-
-    fun logout() {
-        viewModelScope.launch {
-            repository.logout()
-        }
-    }
 }

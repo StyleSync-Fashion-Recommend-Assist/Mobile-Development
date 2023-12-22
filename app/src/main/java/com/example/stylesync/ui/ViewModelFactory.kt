@@ -8,6 +8,7 @@ import com.example.stylesync.repository.Repository
 import com.example.stylesync.ui.closet.ClosetViewModel
 import com.example.stylesync.ui.login.LoginViewModel
 import com.example.stylesync.ui.main.MainViewModel
+import com.example.stylesync.ui.profile.ProfileViewModel
 import com.example.stylesync.ui.register.RegisterActivity
 import com.example.stylesync.ui.register.RegisterViewModel
 
@@ -25,6 +26,9 @@ class ViewModelFactory(private val repository: Repository) :
             }
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> {
                 LoginViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
+                ProfileViewModel(repository) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

@@ -1,5 +1,6 @@
 package com.example.stylesync.ui.closet
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,7 +29,17 @@ class ClosetAdapter (private val closetItems: MutableList<data>) :
         val item = closetItems[position]
 
         holder.textTitle.text = item.namaItem
-        holder.textColor.text = item.warnaId.toString()
+        holder.textColor.text = item.warna
+        holder.itemView.setOnClickListener{
+            val intentDetail = Intent(holder.itemView.context, AddClosetActivity::class.java)
+            intentDetail.putExtra("photoImage", item.photoImage)
+            intentDetail.putExtra("namaItem", item.namaItem)
+            intentDetail.putExtra("idKategori", item.kategoriId)
+            intentDetail.putExtra("idSubKategori", item.subKategoriId)
+            intentDetail.putExtra("occupation", item.occupation)
+            intentDetail.putExtra("warna", item.warna)
+            holder.itemView.context.startActivity(intentDetail)
+        }
     }
 
     override fun getItemCount(): Int {

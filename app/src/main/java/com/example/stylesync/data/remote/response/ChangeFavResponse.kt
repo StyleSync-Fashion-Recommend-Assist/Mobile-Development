@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class ChangeFavResponse(
 
-	@field:SerializedName("stauts")
+	@field:SerializedName("status")
 	val stauts: String? = null,
 
 	@field:SerializedName("message")

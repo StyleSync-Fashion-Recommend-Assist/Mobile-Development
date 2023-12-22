@@ -15,13 +15,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.stylesync.data.remote.response.data
 import com.google.android.material.tabs.TabLayout
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.stylesync.databinding.FragmentHomeBinding
+import com.example.stylesync.databinding.FragmentClosetBinding
+import com.example.stylesync.list.ImportantLists
 
 class ClosetFragment : Fragment() {
 
     private lateinit var tabLayout: TabLayout
     private lateinit var recyclerView: RecyclerView
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentClosetBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -34,7 +35,7 @@ class ClosetFragment : Fragment() {
     ): View {
         val closetViewModel = ViewModelProvider(this).get(ClosetViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentClosetBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         setupView()
@@ -54,13 +55,10 @@ class ClosetFragment : Fragment() {
     }
 
     private fun setupTabs() {
-        // Add tabs for closet categories (e.g., Top, Bottom, Accessories)
-        val categories = listOf("Top", "Bottom", "Dress", "Outwear", "Activewear", "Workwear", "Accessories", "Shoes")
-        for (category in categories) {
-            tabLayout.addTab(tabLayout.newTab().setText(category))
+        for (category in ImportantLists.categoriesList) {
+            tabLayout.addTab(tabLayout.newTab().setText(category.category))
         }
 
-        // Set tab selected listener if needed
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
 
@@ -78,17 +76,19 @@ class ClosetFragment : Fragment() {
 
     private fun setupRecyclerView() {
         val closetItems = mutableListOf(
-            data(1,1,1,1,1,3,"Item 1"),
-            data(2,1,1,2,1,3,"item 2"),
-            data(3,2,2,3,2,3,"item 3"),
-            data(4,1,2,4,2,3,"item 4")
+            data(1,1,1,"Blue","Casual","",1, 1, 1, "Jacket"),
+            data(1,1,1,"Blue","Casual","",2, 1, 1, "Jacket"),
+            data(1,1,1,"Blue","Casual","",3, 1, 1, "Jacket"),
+            data(1,1,1,"Bulu","Casual","",4, 1, 1, "Jacket"),
+            data(1,1,1,"Blue","Casual","",3, 1, 1, "Jacket"),
+            data(1,1,1,"Bulu","Casual","",4, 1, 1, "Jacket"),
+            data(1,1,1,"Blue","Casual","",3, 1, 1, "Jacket"),
+            data(1,1,1,"Bulu","Casual","",4, 1, 1, "Jacket")
         )
 
-        // Create and set up the adapter
         val adapter = ClosetAdapter(closetItems)
         recyclerView.adapter = adapter
 
-        // Set the layout manager (GridLayoutManager with two columns)
         val layoutManager = GridLayoutManager(requireContext(), 2)
         recyclerView.layoutManager = layoutManager
     }

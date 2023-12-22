@@ -9,17 +9,17 @@
         android:id="@+id/navigation_closet"
         android:name="com.example.stylesync.ui.closet.ClosetFragment"
         android:label="@string/title_closet"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_closet" />
 
     <fragment
         android:id="@+id/navigation_outfit"
         android:name="com.example.stylesync.ui.outfit.OutfitFragment"
         android:label="@string/title_outfit"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_outfit" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.stylesync.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context="ui.profile.ProfileFragment">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profilePictureImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/baseline_account_circle_24"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Name EditText -->
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilePictureImageView"
+        android:layout_marginTop="16dp"
+        android:hint="Sulistia Nengsih"/>
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameEditText"
+        android:layout_marginTop="16dp"
+        android:inputType="textEmailAddress"
+        android:hint="sulistianengsih5@gmail.com"/>
+
+    <!-- Height EditText -->
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailEditText"
+        android:layout_marginTop="16dp"
+        android:inputType="numberDecimal"
+        android:hint="Height (cm)"/>
+
+    <!-- Weight EditText -->
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightEditText"
+        android:layout_marginTop="16dp"
+        android:inputType="numberDecimal"
+        android:hint="Weight (kg)"/>
+
+    <TextView
+        android:id="@+id/buttonChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change password"
+        android:layout_below="@id/weightEditText"
+        android:textColor = "@color/teal_blue"
+        android:layout_marginTop="16dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/buttonFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:layout_below="@id/buttonChangePassword"
+        android:textColor = "@color/teal_blue"
+        android:layout_marginTop="16dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_below="@id/buttonFeedback"
+        android:textColor = "@color/teal_blue"
+        android:layout_marginTop="16dp"
+        android:clickable="true"/>
+
+    <!-- Update Profile Button -->
+    <Button
+        android:id="@+id/updateProfileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="72dp"
+        android:text="Update Profile"/>
+</RelativeLayout>

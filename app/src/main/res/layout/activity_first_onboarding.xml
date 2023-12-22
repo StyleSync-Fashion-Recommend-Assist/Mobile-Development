@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginTop="12dp"
-    android:layout_marginBottom="12dp"
+    android:padding="16dp"
     tools:context=".ui.onboarding.FirstOnboardingActivity">
 
     <ImageView
@@ -26,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="216dp"
+        android:textColor="@color/charcoal_gray"
         android:textSize="16sp"
         android:text="@string/onboarding_1"
         app:layout_constraintBottom_toBottomOf="parent"

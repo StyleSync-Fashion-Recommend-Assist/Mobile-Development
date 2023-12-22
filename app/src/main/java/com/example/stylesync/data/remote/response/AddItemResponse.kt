@@ -25,6 +25,15 @@ data class data(
 	@field:SerializedName("warnaId")
 	val warnaId: Int? = null,
 
+	@field:SerializedName("warna")
+	val warna: String? = null,
+
+	@field:SerializedName("occupation")
+	val occupation: String? = null,
+
+	@field:SerializedName("photoImage")
+	val photoImage: String? = null,
+
 	@field:SerializedName("id")
 	val id: Int? = null,
 
